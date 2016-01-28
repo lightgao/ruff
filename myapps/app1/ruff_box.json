@@ -40,6 +40,25 @@
             "internal": true
         },
         {
+            "id": "gpio-11",
+            "model": "ruff-gpio",
+            "driver": "sys-gpio",
+            "inputs": {
+                "pin": {
+                    "type": "number",
+                    "args": {
+                        "pin": 11
+                    }
+                }
+            },
+            "outputs": {
+                "gpio": {
+                    "type": "gpio"
+                }
+            },
+            "internal": true
+        },
+        {
             "id": "gpio-17",
             "model": "ruff-gpio",
             "driver": "sys-gpio",
@@ -199,6 +218,21 @@
                 }
             },
             "internal": true
+        },
+        {
+            "id": "button",
+            "model": "CK002",
+            "driver": "button-gpio",
+            "inputs": {
+                "gpio": {
+                    "type": "gpio",
+                    "args": {
+                        "direction": "in",
+                        "edge": "both"
+                    },
+                    "bind": "gpio-11/gpio"
+                }
+            }
         }
     ]
 }
