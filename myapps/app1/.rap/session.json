@@ -7,13 +7,8 @@
         }
     ],
     "active": {
-        "index": 0,
         "id": "lgao",
         "uid": "76:33:00:02:06:90",
-        "address": "192.168.2.106",
-        "port": 58264,
-        "type": "ack",
-        "version": "2",
-        "shadowport": 7883
+        "address": "192.168.2.106"
     }
 }
