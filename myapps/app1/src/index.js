@@ -6,7 +6,13 @@ $.ready(function (error) {
         return;
     }
 
-    $('led-r').turnOn();
+    $('button').on('push', function() {
+        $('led-r').turnOn();
+    });
+
+    $('button').on('release', function() {
+        $('led-r').turnOff();
+    });
 });
 
 $.end(function () {
