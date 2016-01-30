@@ -10,5 +10,19 @@ module.exports = driver({
 
     detach: function () {
         //do clean work here
+    },
+
+
+    attach: function(inputs) {
+        this._mygpio = inputs.getRequired('mygpio');
+    },
+
+    detach: function() {
+    },
+
+    exports: {
+        readValue: function() {
+          return this._mygpio.read();
+        }
     }
 });
