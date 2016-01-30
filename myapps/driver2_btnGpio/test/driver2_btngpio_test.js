@@ -13,13 +13,17 @@ var driverPath = path.join(__dirname, '..');
 module.exports = {
     'test should build driver': function () {
         driverRunner.run(driverPath, function(device, context) {
-            var gpio = context.arg('btnGpio');
+            var gotEvent = false;
+            device.on("pressed", function(){
+                gotEvent = true;
+            });
 
+            var gpio = context.arg('btnGpio');
             when(gpio).read().thenReturn(0);
             gpio.emit('interrupt');
 
-            verify(device).emit('pressed');
-//            assert.equal(0, device.readValue());
+//            verify(device).emit('pressed');
+            assert(gotEvent);
         });
     }
 };
