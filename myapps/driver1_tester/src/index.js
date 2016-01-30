@@ -8,10 +8,10 @@ $.ready(function (error) {
 
     setInterval(function(){
         if ($('mygpio').readValue() == 0) {
-            console.log('pressed')
+            console.log('driver1_tester: pressed')
             $('led-r').turnOn();
         } else {
-            console.log('released')
+            console.log('driver1_tester: released')
             $('led-r').turnOff();
         }
     }, 300);
