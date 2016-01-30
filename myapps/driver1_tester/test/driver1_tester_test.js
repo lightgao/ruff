@@ -7,6 +7,7 @@ var appRunner = require('ruff-app-runner');
 var mock = require('ruff-mock');
 var verify = mock.verify;
 var when = mock.when;
+var atLeast = mock.atLeast;
 
 var appPath = path.join(__dirname, '..');
 
@@ -17,11 +18,11 @@ module.exports = {
                 when($('mygpio')).readValue().thenReturn(0);
 
                 setTimeout(function() {
-                    verify($('led-r')).turnOn();
-                }, 100);
+                    verify($('led-r'), atLeast(1)).turnOn();
+                }, 500);
             })
             .end(function () {
-//                verify($('led-r')).turnOff();
+//                verify($('led-r'), atLeast(1)).turnOff();
             });
     }
 };
