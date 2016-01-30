@@ -6,7 +6,15 @@ $.ready(function (error) {
         return;
     }
 
-    $('led-r').turnOn();
+    setInterval(function(){
+        if ($('mygpio').readValue() == 0) {
+            console.log('pressed')
+            $('led-r').turnOn();
+        } else {
+            console.log('released')
+            $('led-r').turnOff();
+        }
+    }, 300);
 });
 
 $.end(function () {
