@@ -18,7 +18,7 @@ module.exports = {
                 gotEvent = true;
             });
 
-            var gpio = context.arg('btnGpio');
+            var gpio = context.arg('btngpio');
             when(gpio).read().thenReturn(0);
             gpio.emit('interrupt');
 

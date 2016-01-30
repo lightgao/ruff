@@ -9,7 +9,7 @@ module.exports = driver({
         //this._gpio = inputs.getRequired('gpio');
 
         var _this = this;
-        this._gpio = inputs.getRequired('btnGpio');
+        this._gpio = inputs.getRequired('btngpio');
 
         this._gpio.setDirection(Gpio.IN);
         this._gpio.setEdge(Gpio.EDGE_BOTH);
