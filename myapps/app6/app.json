@@ -14,6 +14,23 @@
                     }
                 }
             }
+        },
+        {
+            "id": "sound-01",
+            "model": "SOUND-01",
+            "driver": "sound-01",
+            "args": {
+                "interval": 1000
+            },
+            "inputs": {
+                "gpio": {
+                    "type": "gpio",
+                    "args": {
+                        "direction": "in",
+                        "edge": "falling"
+                    }
+                }
+            }
         }
     ]
 }

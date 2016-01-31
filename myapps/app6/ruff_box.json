@@ -59,6 +59,25 @@
             "internal": true
         },
         {
+            "id": "gpio-12",
+            "model": "ruff-gpio",
+            "driver": "sys-gpio",
+            "inputs": {
+                "pin": {
+                    "type": "number",
+                    "args": {
+                        "pin": 12
+                    }
+                }
+            },
+            "outputs": {
+                "gpio": {
+                    "type": "gpio"
+                }
+            },
+            "internal": true
+        },
+        {
             "id": "gpio-17",
             "model": "ruff-gpio",
             "driver": "sys-gpio",
@@ -231,6 +250,24 @@
                         "edge": "falling"
                     },
                     "bind": "gpio-11/gpio"
+                }
+            }
+        },
+        {
+            "id": "sound-01",
+            "model": "SOUND-01",
+            "driver": "sound-01",
+            "args": {
+                "interval": 1000
+            },
+            "inputs": {
+                "gpio": {
+                    "type": "gpio",
+                    "args": {
+                        "direction": "in",
+                        "edge": "falling"
+                    },
+                    "bind": "gpio-12/gpio"
                 }
             }
         }

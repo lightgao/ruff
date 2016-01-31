@@ -8,16 +8,21 @@ $.ready(function (error) {
 
     $('sw-1801p').on('shock', function() {
         console.log('shocking');
-
-        $('led-b').turnOn();
-        setTimeout(function(){
-            $('led-b').turnOff();
-        }, 500);
+        lightingLed($('led-b'));
     });
 
-    $('led-r').turnOn();
+    $('sound-01').on('receive', function() {
+        console.log('in sound receive');
+        lightingLed($('led-r'));
+    });
 });
 
 $.end(function () {
-    $('led-r').turnOff();
 });
+
+var timer;
+function lightingLed(led) {
+    led.turnOn();
+    if(timer) { clearTimeout(timer); }
+    timer = setTimeout(function(){ led.turnOff(); }, 1000);
+}

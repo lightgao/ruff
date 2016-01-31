@@ -6,7 +6,8 @@
     "ruff": {
         "dependencies": {
             "ruff-mbd-v1": "*",
-            "sw-1801p": "1.0.1"
+            "sw-1801p": "1.0.1",
+            "sound-01": "1.0.1"
         }
     }
 }
