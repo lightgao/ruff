@@ -1,0 +1,12 @@
+{
+    "name": "app6",
+    "version": "0.1.0",
+    "description": "",
+    "author": "",
+    "ruff": {
+        "dependencies": {
+            "ruff-mbd-v1": "*",
+            "sw-1801p": "1.0.1"
+        }
+    }
+}

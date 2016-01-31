@@ -1,0 +1,19 @@
+{
+    "board": "ruff-mbd-v1",
+    "devices": [
+        {
+            "id": "sw-1801p",
+            "model": "SW-1801P",
+            "driver": "sw-1801p",
+            "inputs": {
+                "gpio": {
+                    "type": "gpio",
+                    "args": {
+                        "direction": "in",
+                        "edge": "falling"
+                    }
+                }
+            }
+        }
+    ]
+}
