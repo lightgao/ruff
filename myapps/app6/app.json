@@ -31,6 +31,20 @@
                     }
                 }
             }
+        },
+        {
+            "id": "flame-gpio",
+            "model": "FLAME-01",
+            "driver": "flame-gpio",
+            "inputs": {
+                "gpio": {
+                    "type": "gpio",
+                    "args": {
+                        "direction": "in",
+                        "edge": "both"
+                    }
+                }
+            }
         }
     ]
 }

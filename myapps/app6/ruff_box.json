@@ -78,6 +78,25 @@
             "internal": true
         },
         {
+            "id": "gpio-13",
+            "model": "ruff-gpio",
+            "driver": "sys-gpio",
+            "inputs": {
+                "pin": {
+                    "type": "number",
+                    "args": {
+                        "pin": 13
+                    }
+                }
+            },
+            "outputs": {
+                "gpio": {
+                    "type": "gpio"
+                }
+            },
+            "internal": true
+        },
+        {
             "id": "gpio-17",
             "model": "ruff-gpio",
             "driver": "sys-gpio",
@@ -268,6 +287,21 @@
                         "edge": "falling"
                     },
                     "bind": "gpio-12/gpio"
+                }
+            }
+        },
+        {
+            "id": "flame-gpio",
+            "model": "FLAME-01",
+            "driver": "flame-gpio",
+            "inputs": {
+                "gpio": {
+                    "type": "gpio",
+                    "args": {
+                        "direction": "in",
+                        "edge": "both"
+                    },
+                    "bind": "gpio-13/gpio"
                 }
             }
         }

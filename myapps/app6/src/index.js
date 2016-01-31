@@ -15,6 +15,13 @@ $.ready(function (error) {
         console.log('in sound receive');
         lightingLed($('led-r'));
     });
+
+    $('flame-gpio').on('fire', function() {
+        console.log('in flame fire');
+    });
+    $('flame-gpio').on('none', function() {
+        console.log('in flame none');
+    });
 });
 
 $.end(function () {
