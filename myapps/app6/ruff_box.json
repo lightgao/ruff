@@ -97,6 +97,25 @@
             "internal": true
         },
         {
+            "id": "gpio-14",
+            "model": "ruff-gpio",
+            "driver": "sys-gpio",
+            "inputs": {
+                "pin": {
+                    "type": "number",
+                    "args": {
+                        "pin": 14
+                    }
+                }
+            },
+            "outputs": {
+                "gpio": {
+                    "type": "gpio"
+                }
+            },
+            "internal": true
+        },
+        {
             "id": "gpio-17",
             "model": "ruff-gpio",
             "driver": "sys-gpio",
@@ -302,6 +321,17 @@
                         "edge": "both"
                     },
                     "bind": "gpio-13/gpio"
+                }
+            }
+        },
+        {
+            "id": "hc-sr501",
+            "model": "HC-SR501",
+            "driver": "hc-sr501",
+            "inputs": {
+                "gpio": {
+                    "type": "gpio",
+                    "bind": "gpio-14/gpio"
                 }
             }
         }

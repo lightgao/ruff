@@ -45,6 +45,16 @@
                     }
                 }
             }
+        },
+        {
+            "id": "hc-sr501",
+            "model": "HC-SR501",
+            "driver": "hc-sr501",
+            "inputs": {
+                "gpio": {
+                    "type": "gpio"
+                }
+            }
         }
     ]
 }

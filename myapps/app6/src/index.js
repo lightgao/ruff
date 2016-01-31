@@ -6,21 +6,30 @@ $.ready(function (error) {
         return;
     }
 
-    $('sw-1801p').on('shock', function() {
-        console.log('shocking');
-        lightingLed($('led-b'));
-    });
+//    $('sw-1801p').on('shock', function() {
+//        console.log('shocking');
+//        lightingLed($('led-b'));
+//    });
+//
+//    $('sound-01').on('receive', function() {
+//        console.log('in sound receive');
+//        lightingLed($('led-r'));
+//    });
 
-    $('sound-01').on('receive', function() {
-        console.log('in sound receive');
-        lightingLed($('led-r'));
-    });
+//    $('flame-gpio').on('fire', function() {
+//        console.log('in flame fire');
+//    });
+//    $('flame-gpio').on('none', function() {
+//        console.log('in flame none');
+//    });
 
-    $('flame-gpio').on('fire', function() {
-        console.log('in flame fire');
+    $('hc-sr501').on('presence', function() {
+        console.log('in infrared presence');
+        $('led-r').turnOn();
     });
-    $('flame-gpio').on('none', function() {
-        console.log('in flame none');
+    $('hc-sr501').on('absence', function() {
+        console.log('in infrared absence');
+        $('led-r').turnOff();
     });
 });
 
