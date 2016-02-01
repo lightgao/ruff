@@ -1,0 +1,13 @@
+{
+    "models": [],
+    "inputs": {
+      "myadc": {
+        "type" : "adc",
+        "args" : {
+          "type": "current",
+          "min": 0,
+          "max": 5
+        }
+      }
+    }
+}
