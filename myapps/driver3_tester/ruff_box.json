@@ -249,7 +249,7 @@
                 "myadc": {
                     "type": "adc",
                     "args": {
-                        "type": "current",
+                        "type": "voltage",
                         "min": 0,
                         "max": 5
                     },
