@@ -13,10 +13,8 @@ module.exports = {
     'test should run application': function () {
         appRunner
             .run(appPath, function () {
-                verify($('led-r')).turnOn();
             })
             .end(function () {
-                verify($('led-r')).turnOff();
             });
     }
 };

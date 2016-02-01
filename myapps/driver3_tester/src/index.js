@@ -7,13 +7,10 @@ $.ready(function (error) {
     }
 
     var adc = $('myadc');
-    setTimeout(function(){
-        console.log("raw|v|i = " + adc.read() + "," + adc.readVoltage() + "," + adc.readCurrent());
-    }, 200);
-
-    $('led-r').turnOn();
+    setInterval(function(){
+        console.log("raw|v = " + adc.read() + "," + adc.readVoltage());
+    }, 1000);
 });
 
 $.end(function () {
-    $('led-r').turnOff();
 });

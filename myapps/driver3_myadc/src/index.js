@@ -7,7 +7,7 @@ module.exports = driver({
         //do init steps here
         //this._gpio = inputs.getRequired('gpio');
 
-        this._adc = options.getRequired('myadc');
+        this._adc = inputs.getRequired('myadc');
     },
 
     detach: function () {
