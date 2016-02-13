@@ -59,6 +59,25 @@
             "internal": true
         },
         {
+            "id": "gpio-12",
+            "model": "ruff-gpio",
+            "driver": "sys-gpio",
+            "inputs": {
+                "pin": {
+                    "type": "number",
+                    "args": {
+                        "pin": 12
+                    }
+                }
+            },
+            "outputs": {
+                "gpio": {
+                    "type": "gpio"
+                }
+            },
+            "internal": true
+        },
+        {
             "id": "gpio-17",
             "model": "ruff-gpio",
             "driver": "sys-gpio",
@@ -231,6 +250,20 @@
                         "edge": "both"
                     },
                     "bind": "gpio-11/gpio"
+                }
+            }
+        },
+        {
+            "id": "relay-1c",
+            "model": "RELAY-1C",
+            "driver": "relay-1c",
+            "inputs": {
+                "gpio": {
+                    "type": "gpio",
+                    "args": {
+                        "direction": "out_low"
+                    },
+                    "bind": "gpio-12/gpio"
                 }
             }
         }

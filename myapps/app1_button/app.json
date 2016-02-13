@@ -14,6 +14,29 @@
                     }
                 }
             }
+        },
+        {
+            "id": "relay-1c",
+            "model": "RELAY-1C",
+            "driver": "relay-1c",
+            "inputs": {
+                "gpio": {
+                    "type": "gpio",
+                    "args": {
+                        "direction": "out_low"
+                    }
+                }
+            }
+        },
+        {
+            "id": "hc-sr501",
+            "model": "HC-SR501",
+            "driver": "hc-sr501",
+            "inputs": {
+                "gpio": {
+                    "type": "gpio"
+                }
+            }
         }
     ]
 }
